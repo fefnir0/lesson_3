@@ -1,0 +1,231 @@
+# theres 4 type of datas
+# text ones that written with " "  (string)
+# numeric variables  like 1 , 5  (int)
+# status reports like True or False (boolen)
+
+# and theres also squence types like (list, tuples, range)
+# and mapping type (dict)
+
+#for example to learn data type of the x
+x = 5
+print(type(x))
+
+#other data types is like
+x = "apple"
+x = 1.2
+x = True
+
+#squence types looks like this
+list1 = ["banana", "apple"]
+print(list1)  # Output: ['banana', 'apple']
+
+#and for the mapping types
+x = range(5)
+
+dict = {"name": "ahmet" , "age": 16}
+print(dict.get("name"))
+#the input can be changed to age
+
+x = 4 > 5  # Comparison
+print(x)  # Output: False
+print(type(x))  # Output: <class 'bool'>
+
+import random  # Import the random module
+
+# Generate and print a random number between 1 and 9
+print(random.randrange(1, 10))
+
+#string type
+
+print("hello")  # works
+print('hello')  # also works keep in mind
+
+print("it's allright")
+print("kemal"'')
+print("his dog is called 'Bella'"')
+# red line is the error finish the quotes
+
+a = """
+eleklkere
+relkgerltw 
+glwgrewilkrtw
+you can write your notes in this way
+"""
+
+x = "kemal is a lecturer"
+print(x[1])  # prints 'e' (index 1 = second character)
+print(x[2])  # prints 'm' (index 2 = third character)
+print(x[0])  # prints 'k' (index 0 = first character)
+
+for x in "kemal":
+    print(x)
+# the loop goes through each character in the string "kemal", one by one, and prints it.
+
+a = "kemal"
+print(len(a))  # Output: 5
+# The len() function gives the length of a string, which is the total number of characters (including spaces).
+
+b = "hello ai"
+print(len(b))  # Output: 8 included spaces
+
+txt = "kemal has a dog"
+print("dog" in txt)  # Output: True
+
+#The "in" checks if a substring exists within a string. If "dog" is part of "kemal has a dog", it returns True.
+
+if "dog" in txt:
+    print("yes, 'dog' is in it")  # Output: yes, 'dog' is in it
+
+print("cat" not in txt)  # Output: True
+print("dog" not in txt)  # Output: False
+
+x = "hello class!"
+print(x[0:2])  # Output: he
+
+#[0:2] → From index 0 (inclusiv) to index 2 (exclusive), which is "he".
+
+y = "hello class!"
+print(x[:7])  # Output: hello c
+
+z = "hello class!"
+print(z[2:])  # Output: llo class!
+
+x = "hello class!"
+print(x[-5:-2])  # Output: ass
+# Negative indexing starts counting from the end. -1 is the last character, -2 is the second-last, and so on.
+
+a = "kemal"
+print(a.upper())  # Output: KEMAL
+# Converts all characters to uppercase.
+
+a = "KEMAL"
+print(a.lower())  # Output: kemal
+# Converts all characters to lowercase.
+
+x = " kemal     gunay "
+print(x.strip())  # Output: kemal     gunay
+
+a = "kemal"
+print(a.replace("k", "c"))  # Output: cemal
+# it replaces specified characters with other characters we want
+
+x = "kemal gunay, mert uzuner, eren kocaömer"
+print(x.split(","))
+# Output: ['kemal gunay', ' mert uzuner', ' eren kocaömer']
+
+x = "kemal gunay, mert uzuner, eren kocaömer"
+print(x.split(","))
+# Output: ['kemal gunay', ' mert uzuner', ' eren kocaömer']
+#The split() method divides a string into a list of substrings, using the specified separator.
+
+a = "qasim"
+b = " kazmi"
+c = a + b
+print(c)  # Outputs: "qasim kazmi"
+# + means combining
+
+age = 18
+name = "My name is Bengisu, I am" + age
+#this gives an error because you can merge a string with a int
+
+name = f"My name is Bengisu, I am {age}"
+print(name)  # Outputs: "My name is Bengisu, I am 18" this is a f-string
+
+price = 60
+x = f"car price is {price} turkish lira"
+print(x)  # Outputs: "car price is 60 turkish lira"
+#F-strings allow embedding variables into strings.
+
+#examples Formatting with decimals:
+price = 59
+txt = f"the price is {price:.2f} dollars"
+print(txt)  # Outputs: "the price is 59.00 dollars"
+
+#You can even include calculations:
+
+txt = f"the price is {20 + 60} dollars"
+print(txt)  # Outputs: "the price is 80 dollars"
+
+txt = "I am a lecturer. \"kemal\" "
+print(txt)  # Outputs: 'I am a lecturer. "kemal" '
+# Use a backslash (\) to include special characters like quotes in a string.
+
+print(10 > 9)  # Outputs: True
+print(10 == 9) # Outputs: False
+print(10 < 9)  # Outputs: False
+
+a = 100
+b = 20
+if b > a:
+    print("b is greater than a")
+else:
+    print("b is not greater than a")  # This is printed
+
+#true values
+print(bool("hi"))
+print(bool(15))
+
+#false values
+print(bool(False))
+print(bool(None))
+print(bool(0))
+print(bool(""))
+print(bool([]))
+print(bool(()))
+
+def myFunction():
+    return True
+
+print(myFunction())  # Outputs: True
+
+if myFunction():
+    print("yes")  # Outputs: yes
+else:
+    print("no")
+
+
+x = 100
+print(isinstance(x, str))  # Outputs: False
+b = str(x)  # Converts x to a string
+print(type(b))  # Outputs: <class 'str'>
+# You can check the type of a variable using isinstance.
+
+# operators
+# + addition
+# - subtraction
+# * multiplication
+# / division
+# +=   x + = 3   x = x + 3
+
+
+x = 100
+x += 3  # Same as: x = x + 3
+print(x)  # Outputs: 103
+
+x -= 3  # Same as: x = x - 3
+print(x)  # Outputs: 100
+
+x *= 3  # Same as: x = x * 3
+print(x)  # Outputs: 300
+
+x = 3
+y = 3
+print(x == y)  # True, x is equal to y
+print(x != y)  # False, x is not different from y
+
+print(x < 4 and x < 10)  # True
+#Both conditions must be True.
+
+print(x < 4 or x > 10)  # True
+#At least one condition must be True.
+
+print(not(x < 5 and x < 10))  # False
+#Negates the result.
+
+x = 3
+y = 3
+print(x is y)       # True, x and y refer to the same object
+print(x is not y)   # False, they are the same
+
+#is: Checks if two variables refer to the same object.
+#is not: Checks if they do not refer to the same object.
